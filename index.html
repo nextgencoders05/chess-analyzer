@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chess Analyzer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-icon">♞</div>
+      <div>
+        <div class="brand-title">Chess <span>Analyzer</span></div>
+        <div class="brand-subtitle">Analyze · Improve · Become Better</div>
+      </div>
+    </div>
+    <div class="free-badge">FREE</div>
+  </header>
+
+  <main class="dashboard">
+    <section class="board-card">
+      <div class="section-heading">
+        <div>
+          <h1>Chess Analyzer</h1>
+          <p>Interactive board preview</p>
+        </div>
+        <button class="theme-button" onclick="cycleTheme()">Theme</button>
+      </div>
+
+      <div class="board-wrap">
+        <div id="chessboard" aria-label="Chess board"></div>
+      </div>
+
+      <div class="controls">
+        <button onclick="undoMove()">↶ Undo</button>
+        <button onclick="redoMove()">↷ Redo</button>
+        <button onclick="flipBoard()">⇅ Flip</button>
+        <button onclick="resetBoard()">↻ Reset</button>
+      </div>
+    </section>
+
+    <aside class="analysis-card">
+      <div class="analysis-tabs">
+        <button class="active">Analysis</button>
+        <button>Move List</button>
+        <button>Evaluation</button>
+      </div>
+
+      <div class="analysis-box">
+        <div class="label">Best Move</div>
+        <div class="value">Waiting...</div>
+        <div class="muted">Stockfish will be added in the next build step.</div>
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat">
+          <span>Evaluation</span>
+          <strong>+0.00</strong>
+        </div>
+        <div class="stat">
+          <span>Depth</span>
+          <strong>--</strong>
+        </div>
+        <div class="stat">
+          <span>Opening</span>
+          <strong>Starting</strong>
+        </div>
+        <div class="stat">
+          <span>Status</span>
+          <strong class="online">Ready</strong>
+        </div>
+      </div>
+
+      <div class="move-history">
+        <div class="history-title">Move History</div>
+        <div class="empty-history">No moves yet</div>
+      </div>
+
+      <div class="free-note">
+        <strong>Free Chess Analyzer</strong>
+        <span>Built for browser-based Stockfish analysis.</span>
+      </div>
+    </aside>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
